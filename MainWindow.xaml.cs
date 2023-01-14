@@ -36,7 +36,12 @@ namespace weatherApp
         }
 
 
-
+        /*
+         * Todo: 
+         *       5 days forecast
+         *       Day / night background
+         *       Locaton
+         */
         private void buttonSearch_Click(object sender, RoutedEventArgs e)
         {
             q = inputCity.Text;
@@ -78,7 +83,7 @@ namespace weatherApp
             return weather;
         }
 
-
+        
         //check if the entered city exist.
         private bool isCityOk(String city)
         {
