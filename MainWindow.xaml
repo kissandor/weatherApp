@@ -1,0 +1,77 @@
+﻿<Window x:Class="weatherApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:weatherApp"
+        mc:Ignorable="d"
+        Title="Weather" Height="450" Width="450">
+    <Window.Background>
+        <ImageBrush ImageSource="/img/backgound.png" ></ImageBrush>
+    </Window.Background>
+    <DockPanel LastChildFill="True">
+        <Border DockPanel.Dock="Top" Height="30" CornerRadius="10" Margin="10">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock  VerticalAlignment="Center" FontSize="20" FontFamily="Book Antiqua" FontWeight="Bold" Margin="0 0 20 0" Foreground="White"> City: 
+                </TextBlock>
+                <TextBox x:Name="inputCity" VerticalAlignment="Center" FontSize="20" FontFamily="Book Antiqua" MinWidth="200">
+                </TextBox>
+                <Button x:Name="buttonSearch" Margin="20 0 0 0" Padding="10 0 10 0" Click="buttonSearch_Click">Search</Button>
+            </StackPanel>
+        </Border>
+        <Border DockPanel.Dock="Bottom">
+        </Border>
+        <Border Height="150"  DockPanel.Dock="Bottom">
+            <StackPanel Orientation="Horizontal">
+                <StackPanel Orientation="Vertical" Width="80" Margin="5 0 5 0">
+                    <Image x:Name="day1"/>
+                    <Separator/>
+                    <TextBlock Foreground="White" Text="Hello"/>
+                    <Separator/>
+                    <TextBlock Foreground="White" Text="Hello"/>
+                </StackPanel>
+                <StackPanel Orientation="Vertical" Width="80" Margin="5 0 5 0">
+                    <Image x:Name="day2"/>
+                    <Separator/>
+                    <TextBlock Foreground="White" Text="Hello"/>
+                    <Separator/>
+                    <TextBlock Foreground="White" Text="Hello"/>
+                </StackPanel>
+                <StackPanel Orientation="Vertical" Width="80" Margin="5 0 5 0">
+                    <Image x:Name="day3"/>
+                    <Separator/>
+                    <TextBlock Foreground="White" Text="Hello"/>
+                    <Separator/>
+                    <TextBlock Foreground="White" Text="Hello"/>
+                </StackPanel>
+                <StackPanel Orientation="Vertical" Width="80" Margin="5 0 5 0">
+                    <Image x:Name="day4" />
+                    <Separator/>
+                    <TextBlock Foreground="White" Text="Hello"/>
+                    <Separator/>
+                    <TextBlock Foreground="White" Text="Hello"/>
+                </StackPanel>
+                <StackPanel Orientation="Vertical" Width="80" Margin="5 0 5 0">
+                    <Image x:Name="day5"/>
+                    <Separator/>
+                    <TextBlock Foreground="White" Text="Hello"/>
+                    <Separator/>
+                    <TextBlock Foreground="White" Text="Hello"/>
+                </StackPanel>
+            </StackPanel>
+        </Border>
+        <Border  CornerRadius="10" Margin="10" Padding="10"
+ DockPanel.Dock="Left">
+            <StackPanel>
+                <TextBlock x:Name="cityNameDisplay" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="16" />
+                <Separator/>
+                <TextBlock x:Name="temperatureDisplay" FontSize="60" Foreground="White"/>
+                <Separator/>
+                <TextBlock x:Name="realFeelingTempDisplay" Foreground="White"/>
+            </StackPanel>
+        </Border>
+        <Border CornerRadius="10" Margin="10">
+            <Image x:Name="imgWeather"/>
+        </Border>
+    </DockPanel>
+</Window>
