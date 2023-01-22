@@ -66,6 +66,8 @@ namespace weatherApp
             day3.Source = new BitmapImage(new Uri(image));
             day4.Source = new BitmapImage(new Uri(image));
             day5.Source = new BitmapImage(new Uri(image));
+            
+            backgroundImage(time.Hour);
         }
 
         private Weather getWeather(String city)
@@ -94,6 +96,23 @@ namespace weatherApp
             string Code = rsp.StatusCode.ToString();
 
             return Code == "OK";
+        }
+
+        private void backgroundImage(int hour)
+        {
+            
+            if (hour>19 || hour<7)
+            { 
+                this.Background = new ImageBrush(new BitmapImage(new Uri("pack://application:,,,/img/backgound.PNG")));
+                this.Foreground = Brushes.White;
+            }
+            else
+            {
+                this.Background = new ImageBrush(new BitmapImage(new Uri("pack://application:,,,/img/background_day.PNG")));
+
+                BrushConverter bc = new BrushConverter(); 
+                this.Foreground = (Brush)bc.ConvertFrom("#4A3F3D");
+            }
         }
     }
 }
